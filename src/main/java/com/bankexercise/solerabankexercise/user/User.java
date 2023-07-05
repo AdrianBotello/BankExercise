@@ -1,4 +1,4 @@
-package com.bankexercise.solerabankexercise;
+package com.bankexercise.solerabankexercise.user;
 
 import java.math.BigDecimal;
 import java.nio.charset.StandardCharsets;

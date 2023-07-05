@@ -1,9 +1,7 @@
 package com.bankexercise.solerabankexercise.account;
 
-import com.bankexercise.solerabankexercise.User;
-import com.bankexercise.solerabankexercise.UserNotFoundException;
-import com.bankexercise.solerabankexercise.account.Account;
-import com.bankexercise.solerabankexercise.account.AccountDaoService;
+import com.bankexercise.solerabankexercise.user.User;
+import com.bankexercise.solerabankexercise.errorhandling.UserNotFoundException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;

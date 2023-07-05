@@ -1,6 +1,6 @@
-package com.bankexercise.solerabankexercise;
+package com.bankexercise.solerabankexercise.user;
 
-import com.bankexercise.solerabankexercise.User;
+import com.bankexercise.solerabankexercise.user.User;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

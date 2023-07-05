@@ -1,6 +1,6 @@
 package com.bankexercise.solerabankexercise.account;
 
-import com.bankexercise.solerabankexercise.User;
+import com.bankexercise.solerabankexercise.user.User;
 
 public class Account {
     private User OwnerName;

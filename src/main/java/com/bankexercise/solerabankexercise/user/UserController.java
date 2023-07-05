@@ -1,6 +1,7 @@
-package com.bankexercise.solerabankexercise;
+package com.bankexercise.solerabankexercise.user;
 
 
+import com.bankexercise.solerabankexercise.user.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

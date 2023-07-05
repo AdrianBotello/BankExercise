@@ -1,8 +1,7 @@
 package com.bankexercise.solerabankexercise.account;
 
-import com.bankexercise.solerabankexercise.User;
-import com.bankexercise.solerabankexercise.UserDaoService;
-import com.bankexercise.solerabankexercise.account.Account;
+import com.bankexercise.solerabankexercise.user.User;
+import com.bankexercise.solerabankexercise.user.UserDaoService;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

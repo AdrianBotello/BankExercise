@@ -1,4 +1,4 @@
-package com.bankexercise.solerabankexercise;
+package com.bankexercise.solerabankexercise.errorhandling;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
