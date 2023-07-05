@@ -12,17 +12,19 @@ public class User {
     private  String  email;
     private Integer Id;
 
+    private Integer phone;
     private String password;
     //private float AccountBalance;
 
 
 
-    public User(String firstName, String secondName, String  email, int id, String password) {
+    public User(String firstName, String secondName, String  email, int id, String password, int phone) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.email = email;
         this.Id = id;
         this.password = password;
+        this.phone = phone;
         //this.AccountBalance = accountBalance;
     }
 
@@ -73,6 +75,14 @@ public class User {
         this.password = password;
     }
 
+    public Integer getPhone() {
+        return phone;
+    }
+
+    public void setPhone(Integer phone) {
+        this.phone = phone;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -80,15 +90,8 @@ public class User {
                 ", secondName='" + secondName + '\'' +
                 ", email='" + email + '\'' +
                 ", Id=" + Id +
+                ", phone=" + phone +
                 ", password='" + password + '\'' +
                 '}';
     }
-    //    public float getAccountBalance() {
-//        return AccountBalance;
-//    }
-//
-//    public void setAccountBalance(float accountBalance) {
-//        AccountBalance = accountBalance;
-//    }
-
 }

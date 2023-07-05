@@ -1,11 +1,6 @@
 package com.bankexercise.solerabankexercise.user;
 
 import org.springframework.stereotype.Component;
-
-import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
@@ -20,12 +15,12 @@ public class UserDaoService {
 
     static {
         users.add(new User("Emmanuel", "ortega", "emmatega@yahoo.com", (++usersCount),
-                "bootca2"));
+                "bootca2", 63254875));
         users.add(new User("Dojo", "kata", "solera@solera.com", (++usersCount),
-                "bootcamp5"));
+                "bootcamp5",63254875));
         users.add(new User("George", "cartel", "kartel@live.com", (++usersCount),
-                "123888.89f"));
-        users.add(new User("Kojo", "Buju", "buju@hotmail.com", (++usersCount), "180888.99f"));
+                "123888.89f",63254875 ));
+        users.add(new User("Kojo", "Buju", "buju@hotmail.com", (++usersCount), "180888.99f",63254875));
     }
 
     public User findOne(int id) {
@@ -42,20 +37,10 @@ public class UserDaoService {
         users.add(user);
         return user;
     }
-
     public void deleteById(int id) {
         Predicate<? super User> predicate = user -> user.getId() == id;
         users.removeIf(predicate);
     }
-//
-//    public boolean login(String email, String password){
-//        if (users.contains(email) && users.contains(password)){
-//            return true;
-//            }
-//        else {
-//            return false;
-//        }
-//    }
 
     public boolean login(String email, String password){
 

@@ -7,6 +7,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -38,8 +39,16 @@ public class UserResource {
         return service.login(email, password);
     }
     @GetMapping("/users/settings")
-    public User settings(int id){
-        return service.findOne(id);
+    public List<String> settings(User user){
+        List<String> userinfo = new ArrayList<>();
+        if(service.login(user.getPassword(), user.getEmail()) == true){
+            userinfo.add(user.getFirstName());
+            userinfo.add(user.getSecondName());
+            userinfo.add(user.getEmail());
+            String i = user.getPhone().toString();
+            userinfo.add(i);
+        }
+        return userinfo;
     }
 
     @DeleteMapping("/users/{id}")
@@ -48,7 +57,7 @@ public class UserResource {
     }
 
     //POST /users
-    @PostMapping("/users")
+    @PostMapping("/signup")
     public ResponseEntity<User> createUser(@RequestBody User user){
         User savedUser = service.save(user);
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
