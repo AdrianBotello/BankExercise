@@ -1,5 +1,12 @@
+import * as React from 'react';
 import logo from '../../images/logo192.png';
 import './Login.css';
+import { UserInterface } from './../UserInterface/UserInterface.js';
+import {
+    BrowserRouter as Router,
+    Route,
+    Routes
+} from "react-router-dom";
 //var bcrypt = require('bcrypt');
 export function Login() {
 //export const Login = () => {
@@ -27,6 +34,23 @@ function CheckUser() {
     console.log(document.getElementById("pass").value);
     var email = document.getElementById("email").value;
     var passWord = document.getElementById("pass").value;
+
+    if (email == "solera@solera.com" && passWord == "bootcamp5") {
+        return (
+            window.location.href = "/user"
+        )
+    } else {
+        window.alert("User not found");
+    }
+    /*fetch("localhost:8080/users/" + email + "/" + passWord).then((response) => {
+        if (response) {
+            return (
+                window.location.href = "/user"
+            )
+        } else {
+            window.alert("Usuario fallido");
+        }*/
+    
     //var passHash = hash(passWord);
     
 }

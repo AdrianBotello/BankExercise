@@ -9,7 +9,7 @@ th, td{
     width: 150px;
 }
 .top {
-    height: 76px;
+    height: 80px;
 }
 .bankInfo {
     display: block;
@@ -17,4 +17,9 @@ th, td{
 }
 link {
     text-decoration: none;
+}
+.redirect{
+    padding-left: 15px;
+    max-width: 500px;
+    max-height: 150px;
 }

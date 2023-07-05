@@ -22,27 +22,33 @@ import {
 export function UserInterface() {
 
     const data = {
-        name: "Edgar J",
+        firstname: "Edgar",
+        secondname: "Johns",
+        email: "Norene39@yahoo.com",
+        phoneNumber: "625-316-9882",
         user: "Katharina_Bernier",
         account: 
             { balance: 1681.37 }
         
     };
+
+    var nameComp = getNameComp(data.firstname, data.secondname);
     return (
-        <div name = "container">
+        <div name="container">
+        <table>
             <tr className="top">
-                <th>
+                <th colspan="3">
                     <img src={userImagen} />
-                    <p>{data.name}</p>
+                    <p>{nameComp}</p>
                     <p>@{data.user}</p>
 
                 </th>
-                <th colspan="4">
+                <th colspan="7">
                     <img src={logoInterface} className="headerImage" ></img>
                 </th>
             </tr>
             <tr>
-                <td>
+                <td colspan="3">
                     <div className="bankInfo">
                         <p><b>${data.account.balance}</b></p>
                         <p>Account Balance</p>
@@ -53,17 +59,25 @@ export function UserInterface() {
                         <li> <img src={accIcon} /> <Link to="/settings">My Account</Link> </li>
                         <li> <img src={bankIcon} /> <Link to="">Bank Account</Link> </li>
                         <li> <img src={notificationIcon} /> <Link to="">Notifications</Link> </li>
-                        <li> <img src={logOutIcon} />  <Link to="">Logout</Link></li>
+                        <li> <img src={logOutIcon} />  <Link to="/">Logout</Link></li>
                     </ul>
                 </td>
-                <td colspan="4">
+                <td colspan="7">
+                        <div className="redirect">
+                            <UserSettings name={data.firstname} lastName={data.secondname} email={data.email} phone={data.phoneNumber} />
+                    </div>
                     
                             
-                                <UserSettings/>
+                                
                             
                     
                 </td>
-            </tr>
+                </tr>
+            </table>
         </div >
     )
+}
+function getNameComp(fstName, lstName) {
+    var name = fstName + " " + lstName.charAt();
+    return name;
 }
