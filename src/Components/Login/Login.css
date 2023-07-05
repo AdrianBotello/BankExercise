@@ -1,12 +1,14 @@
-﻿body {
+﻿.container {
     margin-top: 13%;
     background-color: #fafafa;
     display: block;
 }
+
+
 .draw-border {
     border-color: #f2f2f2;
     height: 40px;
-    width: 25%;
+    width: 300px;
     border-radius: 4px;
     margin-top: 1%;
 }

@@ -15,16 +15,15 @@ function App() {
       </div>
   );*/
   return (
-      <div class="container">
-          <Router>
-              <div className="App">
-                  <Routes>
-                      <Route path="/" element={<Login></Login>}></Route>
-                      <Route path="/signup" element={<SignUp></SignUp>}></Route>
-                      <Route path="/user" element={<UserInterface></UserInterface>}></Route>
-                  </Routes>
-              </div>
-          </Router>
+      <div className="App">
+      <Router>
+          
+              <Routes>
+                  <Route path="/" element={<Login></Login>}></Route>
+                  <Route path="/SignUp" element={<SignUp></SignUp>}></Route>
+                  <Route path="/user" element={<UserInterface></UserInterface>}></Route>
+              </Routes>
+      </Router>
       </div>
   )
 }

@@ -1,12 +1,12 @@
-import image from '../../images/userSettings.png';
+//import image from '../../images/userSettings.png';
 export function UserSettings() {
     return (
-        <div class="bigCont">
-            <div class="settingsCont">
+        <div className="bigCont">
+            <div className="settingsCont">
                 <table>
                     <th>
                         <td>
-                            <img src={ image }/>
+                            <h2></h2>
                         </td>
                     </th>
                 </table>

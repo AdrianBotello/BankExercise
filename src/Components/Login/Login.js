@@ -1,25 +1,38 @@
 import logo from '../../images/logo192.png';
 import './Login.css';
+//var bcrypt = require('bcrypt');
 export function Login() {
 //export const Login = () => {
     return (
-        <body>
+        <div class="container">
+
             <img src={logo} className="Login-logo" />
-            <form>
+            
                 <h1>Login</h1>
-                <input type="text" name="email" placeholder="Username *" className="draw-border"></input>
+                <input type="text" id="email" placeholder="Username *" className="draw-border"></input>
                 <br></br>
 
-                <input type="password" name="pass" placeholder="Password *" className="draw-border"></input>
+                <input type="password" id="pass" placeholder="Password *" className="draw-border"></input>
                 <br>
                 </br>
                 <button onClick={CheckUser} >LOGIN</button>
-            </form>
+            
         
-        </body>
+        </div>
         
     )
 }
 function CheckUser() {
-
+    
+    console.log(document.getElementById("pass").value);
+    var email = document.getElementById("email").value;
+    var passWord = document.getElementById("pass").value;
+    //var passHash = hash(passWord);
+    
 }
+
+/*function hash(str) {
+    var cript = bcrypt.genSaltSync(10);
+    var hash = bcrypt.hashSync(str, cript);
+    return hash; 
+}*/
