@@ -1,12 +1,9 @@
 package com.bankexercise.solerabankexercise.user;
 
-import java.math.BigDecimal;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
-import java.text.NumberFormat;
-import java.util.Locale;
 
 
 public class User {
@@ -20,7 +17,7 @@ public class User {
 
 
 
-    public User(String firstName,String secondName,String  email, int id,String password) {
+    public User(String firstName, String secondName, String  email, int id, String password) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.email = email;
@@ -61,15 +58,16 @@ public class User {
         Id = id;
     }
 
-    public byte[] getPassword() throws NoSuchAlgorithmException {
-        SecureRandom random = new SecureRandom();
-        byte[] bytes = new byte[16];
-        random.nextBytes(bytes);
-        MessageDigest md = MessageDigest.getInstance("SHA-256");
-        md.update(bytes);
-        byte[] digest = md.digest(password.getBytes(StandardCharsets.UTF_8));
-        return digest;
+    public String getPassword(){
+        return password;
     }
+//        SecureRandom random = new SecureRandom();
+//        byte[] bytes = new byte[16];
+//        random.nextBytes(bytes);
+//        MessageDigest md = MessageDigest.getInstance("SHA-256");
+//        md.update(bytes);
+//        byte[] digest = md.digest(password.getBytes(StandardCharsets.UTF_8));
+//        return digest;
 
     public void setPassword(String password) {
         this.password = password;

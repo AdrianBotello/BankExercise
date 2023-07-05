@@ -18,11 +18,11 @@ public class AccountResource {
         this.service = service;
     }
 
-    @GetMapping("/accounts")
+    @GetMapping("/bankaccounts")
     public List<Account> retrieveAllAccounts(){
         return service.findAll();
     }
-    @GetMapping("/accounts/{accountNumber}")
+    @GetMapping("/bankaccounts/{accountNumber}")
     public Account retrieveAnAccount(@PathVariable int accountNumber){
         Account account =  service.findOneAccount(accountNumber);
         if (account == null){
@@ -31,11 +31,11 @@ public class AccountResource {
         return account;
     }
 
-    @DeleteMapping("/accounts/{accountNumber}")
+    @DeleteMapping("/bankaccounts/{accountNumber}")
     public void deleteAnAccount(@PathVariable int accountNumber){
-        service.deleteByaccountNumber(accountNumber);
+        service.deleteByAccountNumber(accountNumber);
     }
-    @PostMapping("/accounts")
+    @PostMapping("/bankaccounts")
     public ResponseEntity<User> createUser(@RequestBody Account account){
         Account savedAccount = service.save(account);
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()

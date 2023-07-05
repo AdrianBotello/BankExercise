@@ -41,7 +41,7 @@ public class AccountDaoService {
         return account;
     }
 
-    public void deleteByaccountNumber(int accountNumber){
+    public void deleteByAccountNumber(int accountNumber){
         Predicate<? super Account> predicate = account -> account.getAccountNumber()==accountNumber;
         accounts.removeIf(predicate);
     }
