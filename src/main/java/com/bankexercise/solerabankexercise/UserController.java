@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 
+// This is a prototype class, The class UserResource has the static list of user which is usable.
 @RestController
 public class UserController {
 
