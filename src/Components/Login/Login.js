@@ -1,6 +1,7 @@
 import logo from '../../images/logo192.png';
 import './Login.css';
 export function Login() {
+//export const Login = () => {
     return (
         <body>
             <img src={logo} className="Login-logo" />

@@ -15,6 +15,11 @@
         border-color: #3f50b5;
     }
 
+    .draw-border:focus::placeholder {
+        color: white;
+    }
+
+
 button {
     height: 40px;
     width: 25.3%;

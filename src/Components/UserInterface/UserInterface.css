@@ -1,0 +1,20 @@
+body{
+    background-color: white;
+    height: 500%;
+}
+ul{
+    list-style-type: none;
+}
+th, td{
+    width: 150px;
+}
+.top {
+    height: 76px;
+}
+.bankInfo {
+    display: block;
+    padding-left: 15px;
+}
+link {
+    text-decoration: none;
+}
