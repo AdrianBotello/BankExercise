@@ -1,5 +1,6 @@
 package com.bankexercise.solerabankexercise;
 
+import com.bankexercise.solerabankexercise.User;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -16,17 +17,17 @@ public class UserDaoService {
 
     static {
         users.add( new User("Emmanuel","ortega","emmatega@yahoo.com", (++usersCount),
-                9578888.19f));
+                "bootca2"));
         users.add(new User("Dojo", "kata","kata@solera.com", (++usersCount),
-                100000.49f));
+                "100000.49f"));
         users.add(new User("George","cartel","kartel@live.com", (++usersCount),
-                123888.89f));
-        users.add(new User("Kojo","Buju","buju@hotmail.com", (++usersCount),180888.99f));
+                "123888.89f"));
+        users.add(new User("Kojo","Buju","buju@hotmail.com", (++usersCount),"180888.99f"));
     }
 
     public User findOne(int id) {
         Predicate<? super User> predicate = user -> user.getId()==id;
-        return users.stream().filter(predicate).findFirst().get();
+        return users.stream().filter(predicate).findFirst().orElse(null);
     }
 
     public List<User> findAll(){
@@ -37,6 +38,11 @@ public class UserDaoService {
         user.setId(++usersCount);
         users.add(user);
         return user;
+    }
+
+    public void deleteById(int id){
+        Predicate<? super User> predicate = user -> user.getId()==id;
+        users.removeIf(predicate);
     }
 
     // public User findOne(int id){}
