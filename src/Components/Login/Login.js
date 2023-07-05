@@ -35,22 +35,28 @@ function CheckUser() {
     var email = document.getElementById("email").value;
     var passWord = document.getElementById("pass").value;
 
-    if (email == "solera@solera.com" && passWord == "bootcamp5") {
+    /*if (email == "solera@solera.com" && passWord == "bootcamp5") {
         return (
             window.location.href = "/user"
         )
     } else {
         window.alert("User not found");
-    }
-    /*fetch("localhost:8080/users/" + email + "/" + passWord).then((response) => {
+    }*/
+    fetch("http://localhost:8083/users/login" + email + "/" + passWord, {
+        'mode': 'no-cors',
+        'headers': {
+            'Access-Control-Allow-Origin': '*',
+        }
+    }).then((response) => {
         if (response) {
             return (
                 window.location.href = "/user"
-            )
+            );
         } else {
             window.alert("Usuario fallido");
-        }*/
-    
+        }
+    }
+    )
     //var passHash = hash(passWord);
     
 }

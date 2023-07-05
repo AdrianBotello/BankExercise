@@ -27,10 +27,14 @@ export function UserInterface() {
         email: "Norene39@yahoo.com",
         phoneNumber: "625-316-9882",
         user: "Katharina_Bernier",
+        id: "aaaasdasdasd",
         account: 
             { balance: 1681.37 }
         
     };
+    fetch("http://localhost:8083/users/3", { 'mode': 'no-cors' }).then((response) => {
+        console.log(response);
+    });
 
     var nameComp = getNameComp(data.firstname, data.secondname);
     return (
@@ -64,7 +68,7 @@ export function UserInterface() {
                 </td>
                 <td colspan="7">
                         <div className="redirect">
-                            <UserSettings name={data.firstname} lastName={data.secondname} email={data.email} phone={data.phoneNumber} />
+                            <UserSettings name={data.firstname} lastName={data.secondname} email={data.email} phone={data.phoneNumber} id={data.id} />
                     </div>
                     
                             

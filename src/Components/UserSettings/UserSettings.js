@@ -1,6 +1,6 @@
 import image from '../../images/userSettings.png';
 import './UserSettings.css';
-export function UserSettings({ name, lastName, email, phone }) {
+export function UserSettings({ name, lastName, email, phone, id }) {
     
     return (
         <div className="bigCont">
@@ -14,7 +14,7 @@ export function UserSettings({ name, lastName, email, phone }) {
                     <input type="text" value={lastName} ></input>
                     <input type="text" value={email}></input>
                     <input type="text" value={phone }></input>
-                    <button>SAVE</button>
+                    <button onClick={ changeUserConf}>SAVE</button>
                 </div>
                         
                        
@@ -22,4 +22,8 @@ export function UserSettings({ name, lastName, email, phone }) {
 
         </div>
     )
+}
+
+function changeUserConf() {
+
 }
