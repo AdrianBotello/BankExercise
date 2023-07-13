@@ -10,6 +10,8 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
+@RequestMapping("/bankaccounts")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class AccountResource {
 
     private AccountDaoService service;
